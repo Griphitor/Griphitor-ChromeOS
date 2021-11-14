@@ -1,0 +1,39 @@
+{
+  "name":"Griphitor",
+  "description":"A web version of Griphitor-Desktop.",
+  "version":"1.0",
+  "icons":{
+    "128":"assets/internal/images/icon.png"
+  },
+  "manifest_version": 2,
+  "background": {
+    "service_worker": "assets/internal/js/main.js"
+  },
+  "action": {},
+  "permissions": [
+    "https://ajax.googleapis.com/*",
+    "fileBrowserHandler",
+    "webview",
+    "fullscreen",
+    "notifications",
+    "downloads",
+    "storage"
+  ],
+  "browser_action": {},
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
+  "Content-Security-Policy": "script-src: 'self' 'unsafe-inline'",
+  "file_browser_handlers": [
+    {
+      "id": "upload",
+      "default_title": "Open in Griphitor",
+      "file_filters": [
+        "filesystem:*.js",
+        "filesystem:*.css",
+        "filesystem:*.html"
+      ]
+    }
+  ]
+}

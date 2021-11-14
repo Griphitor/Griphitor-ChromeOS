@@ -51,7 +51,7 @@ window.addEventListener('DOMContentLoaded', function(e) {
   /* Buttons */
   RunCodeBtn.addEventListener("click", () => {
     var rawusercode = cm.getValue();
-    var libpath = path.join(__dirname, "/assets/lib");
+    var libpath = "../../lib"
     if (rawusercode == '') {
       Notif.classList.add("danger");
       play('assets/internal/sound/error.mp3');
